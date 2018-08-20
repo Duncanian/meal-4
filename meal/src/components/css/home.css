@@ -1,0 +1,28 @@
+/* ======== Main =======*/
+
+.landing img{
+	height: 610px;
+}
+
+
+.landing div{
+	color: #000;
+	position: absolute;
+	top: 30%;
+	font-family: Verdana;
+	font-size: 40px;
+	text-align: center;
+	background: #FFEBE7;
+	opacity: 0.6;
+	padding: 20px 0 40px 0;
+}
+
+.about{
+	text-align: center;
+}
+
+.about h1{
+	font-size: 35px;
+}
+
+/* ======== End of Main =========*/

@@ -1,0 +1,81 @@
+/* ======== Header =======*/
+
+nav{
+	background-color: #7F95D1;
+	margin: 0;
+	text-align: right;
+}
+
+nav h1{
+	margin: 0;
+	color: #fff;
+	text-align: left;
+	position: absolute;
+	top: 20px;
+	left: 70px;
+}
+
+nav label{
+	font-size: 32px;
+	padding: 10px 12px 10px 0;
+	display: none;
+	color: #fff;
+}
+
+ul{
+	width: 60%;
+	margin: 0 auto;
+	padding: 0;
+}
+
+ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 20px;
+}
+
+ul li.welcome{
+	color: #000;
+}
+
+ul li.welcome:hover{
+	color: #fff;
+}
+
+ul li:hover{
+	background-color: #FF82A9;
+}
+
+ul .active li{
+	background-color: #FF82A9;
+}
+
+ul a li{
+	color: #fff;
+	text-decoration: none;
+}
+
+ul a li:hover{
+	color: #000;
+}
+
+
+/* ======== Header =======*/
+
+/* ======== Footer ========*/
+
+.footer{
+	background-color: #000;
+	width: 100%;
+	text-align: center;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	color: #fff;
+}
+
+/* ======== End of footer ========*/
+
+.page-fit{
+	margin-bottom: 17%;
+	margin-top: 5%;
+}
