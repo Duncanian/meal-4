@@ -1,1 +1,1 @@
-# meal-react
+# Book a meal (React JS)
