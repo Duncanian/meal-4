@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import image from './Images/ba1.jpg';
-import './css/style.css';
+import './css/home.css';
 
 class Home extends Component {
   render() {
     return (
       <div>
-      
+
         <div>
           <div className="row">
             <section>

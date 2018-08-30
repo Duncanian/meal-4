@@ -35,4 +35,22 @@ const getData = (url = ``) => {
 
 }
 
-export { postData, getData }
+const putData = (url, data) => {
+  return fetch(url,{
+    body: JSON.stringify(data),
+    cache: 'no-cache',
+    headers: {
+      'Authorization': access_token,
+      'content-type': 'application/json'
+    },
+    method: 'PUT',
+    mode: 'cors',
+    redirect: 'follow',
+    referrer: 'no-referrer',
+  })
+  .then(response => response.json())
+  .catch(error => console.error('Error: ', error))
+  .then(response => console.log('Success:', response))
+}
+
+export { postData, getData, putData }

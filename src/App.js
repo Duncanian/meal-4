@@ -1,17 +1,18 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+// import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 // import Home from './components/home';
 // import Loggedin from './components/loggedin';
 // import Register from './components/register';
 // import Login from './components/login';
 
-import HeaderAdmin from './components/headerAdmin';
+// import HeaderAdmin from './components/headerAdmin';
 
 // import MealMan from './components/mealMan';
 // import Menu from './components/menu';
 // import AddMeal from './components/addMeal';
 // import BookedMeals from './components/bookedMeals';
 // import EditMeal from './components/editMeal';
+
 import HeaderUser from './components/headerUser';
 import Header from './components/header';
 import Footer from './components/footer';
@@ -24,7 +25,7 @@ class App extends Component {
     let authentication;
     if (access_token){
       authentication = (
-          <HeaderUser token={access_token}/>
+          <HeaderUser/>
         )
     }else {
       authentication = (

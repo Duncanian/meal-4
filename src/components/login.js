@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './css/form.css';
+import { postData } from './crud';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 // import axios from 'axios';
 import Home from './home';
@@ -10,6 +11,7 @@ class Login extends Component {
     super(props);
 
     this.state = {
+      token:'',
       username:'',
       password:'',
       message:'',
@@ -34,29 +36,13 @@ class Login extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    let local = "http://127.0.0.1:5000/api/v2/auth/login/";
+    let url = "https://book-meal-api.herokuapp.com/api/v2/auth/login";
     let details = {
         username:this.state.username,
         password:this.state.password
       }
 
-    const postData = (url = ``, data = {}) => {
-    // Default options are marked with *
-
-      return fetch(url,
-        {
-          method:"POST",
-          body: JSON.stringify(data),
-        }
-      )
-      .then(response => response.json())
-      .catch(error => {
-        console.log(`Fetch Error`, error)
-      })
-
-    };
-
-    postData(local, details)
+    postData(url, details)
     .then(data => {
       console.log(data);
         if (data.message) {
@@ -79,82 +65,7 @@ class Login extends Component {
         }
     })
     .catch(error => console.error(error))
-
-
-    // const access_token = localStorage.getItem('access_token');
-
-    // console.log(access_token)
   }
-
-  // handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   // axios({
-  //   //   method: 'post',
-  //   //   url: `${local}`,
-  //   //   data: {username:"admin", password:"admin"}
-  //   // })
-  //   console.log('The form was submitted');
-  //   // console.log(event)
-  //   // console.log(this.state);
-
-  //   let myapi = 'https://book-meal-api.herokuapp.com/api/v2/auth/login';
-  //   const proxyurl = "https://cors-anywhere.herokuapp.com/";
-  //   let local = "http://127.0.0.1:5000/";
-
-  //   const postData = (url = ``, data = {}) => {
-  //   // Default options are marked with *
-
-  //     fetch(proxyurl + url,
-  //     {
-  //       method:"POST",
-  //       body: JSON.stringify(data),
-  //       headers: {
-  //           "Content-Type": "application/json",
-  //           "Accept":"application/json"
-  //           // "Content-Type": "application/x-www-form-urlencoded",
-  //       }
-  //     }
-  //     )
-  //     .then(response => response.json())
-  //     .then(data => {
-  //         /*this.setState({
-  //           isLoaded: true,
-  //           items: data
-  //         });*/
-  //       console.log(data);
-  //     })
-  //     .catch(error => {
-  //       console.log(`Fetch Error`, error)
-  //     })
-
-  //   };
-
-      /*return fetch(url, {
-          method: "POST", // *GET, POST, PUT, DELETE, etc.
-          mode: "cors", // no-cors, cors, *same-origin
-          cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
-          credentials: "same-origin", // include, same-origin, *omit
-          headers: {
-              "Content-Type": "application/json; charset=utf-8",
-              // "Content-Type": "application/x-www-form-urlencoded",
-          },
-          redirect: "follow", // manual, *follow, error
-          referrer: "no-referrer", // no-referrer, *client
-          body: JSON.stringify(data), // body data type must match "Content-Type" header
-      })
-      .then(response => response.json()) // parses response to JSON
-      .catch(error => console.error(`Fetch Error =\n`, error))*/
-
-    // return postData(myapi, {username:"admin", password:"admin"});
-      // .then(data => console.log(data)) // JSON from `response.json()` call
-      // .catch(error => console.error(error));
-
-  // }
-
-  // handleCheck(e) {
-  //   e.preventDefault()
-  //   console.log('Hello')
-  // }
 
   render() {
     let errMessage = '';

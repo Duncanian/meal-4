@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import HeaderUser from './headerUser';
-import Footer from './footer';
 
 class BookedMeals extends Component {
   render() {
@@ -39,7 +37,7 @@ class BookedMeals extends Component {
 										<div className="col-md-6">
 											<input type="submit" name="Book" value="Remove" className="col-md-12"/>
 										</div>
-										
+
 									</div>
 								</div>
 
@@ -63,7 +61,7 @@ class BookedMeals extends Component {
 										<div className="col-md-6">
 											<input type="submit" name="Book" value="Remove" className="col-md-12"/>
 										</div>
-										
+
 									</div>
 								</div>
 
@@ -87,7 +85,7 @@ class BookedMeals extends Component {
 										<div className="col-md-6">
 											<input type="submit" name="Book" value="Remove" className="col-md-12"/>
 										</div>
-										
+
 									</div>
 								</div>
 
@@ -111,14 +109,14 @@ class BookedMeals extends Component {
 										<div className="col-md-6">
 											<input type="submit" name="Book" value="Remove" className="col-md-12"/>
 										</div>
-										
+
 									</div>
 								</div>
 
 							</article>
 
 						</div>
-					</div>	
+					</div>
 				</div>
 
 			</section>

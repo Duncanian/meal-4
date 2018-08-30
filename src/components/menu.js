@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import HeaderUser from './headerUser';
 import Footer from './footer';
+import './css/mealman.css';
 
 class Menu extends Component {
   render() {
@@ -23,7 +24,7 @@ class Menu extends Component {
 
 				<div className="row">
 					<div className="container-fluid">
-						<div class="menu_row">					
+						<div class="menu_row">
 
 							<article className="col-md-3">
 								<div className="row meal_header">
